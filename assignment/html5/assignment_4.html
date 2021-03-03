@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Using Web Worker</title>
+<script>
+    if(window.Worker) {
+        var worker = new Worker("./assignment_4.js");
+        worker.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        alert("Sorry, your browser do not support web worker.");
+    }
+</script>
+</head>
+<body>
+    <div id="result">
+    </div>
+</body>
+</html>

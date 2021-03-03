@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>forms</title>
+        <script src="./assignment_1.js"></script>
+        <link href="./assignment_1.css" rel="stylesheet">
+    </head>
+    <body>
+        <form>  
+                <h3>Billing Address</h3>
+                <div>name on card<input type="text" id="cname" name="cname" pattern="[A-Za-z]+" required placeholder="Mit shah"></div>
+                <div>Card number<input type="tel" id="tel" name="cn" pattern="[0-9]{16}" placeholder="1111-2222-3333-4444" required></div>
+                <div>Expiry month<input type="tel" id="tel" name="em" pattern="[0-9]{2}" placeholder="0-12" required></div>
+                <div>CVV<input type="tel" id="tel" name="cvv" pattern="[0-9]{3}" placeholder="123" required></div>
+                <div>Expiry year<input type="tel" id="tel" name="ey" pattern="[0-9]{4}" placeholder="2020" required></div>
+                <div><input type="submit" value="Submit"></div>
+        </form>
+        <button onclick="location.href='assignment_1.html'">Go back</button>
+    </body>
+</html>

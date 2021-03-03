@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>area</title>
+    </head>
+    <body>
+        <script>
+                    class point {
+                        constructor(x, y) {
+                            this.x = x;
+                            this.y = y;
+                        }
+                    }
+
+                    class shape {
+                        constructor(x, edges) {
+                            this.p = [
+                                [],
+                                []
+                            ];
+                            this.len = [];
+                            this.edges = edges;
+                            this.x = x;
+
+                            for (var j = 0; j < this.x; j++) {
+                                this.p[0].push(this.edges[j].x);
+                            }
+                            for (var j = 0; j < this.x; j++) {
+                                this.p[1].push(this.edges[j].y);
+                            }
+
+                        }
+                        area() {
+                            var a = 0;
+                            var j = this.x - 1;
+                            // console.log(this.p);
+                            for (var i = 0; i < this.x; i++) {
+                                a += (this.p[0][j] + this.p[0][i]) * (this.p[1][j] - this.p[1][i]);
+
+                            }
+                            var c = Math.abs(a / 2);
+                            console.log(c);
+                        }
+                    }
+                    class traingle extends shape {
+                        constructor(x, edges) {
+                            super(x, edges);
+                        }
+                        area() {
+                            var a = 0;
+                            var j = this.x - 1;
+                            // console.log(this.p);
+                            for (var i = 0; i < this.x; i++) {
+                                a += (this.p[0][j] + this.p[0][i]) * (this.p[1][j] - this.p[1][i]);
+
+                            }
+                            var c = Math.abs(a / j);
+                            document.write("area of triangle " + c + "<br>");
+                        }
+                        perimeter() {
+                            var l = 0,
+                                k = 0,
+                                m = 0,
+                                n = 0,
+                                g = 0;
+                            for (var i = 1; i <= this.x; i++) {
+                                if (i == this.x) {
+                                    l = (this.p[0][this.x - 1] - this.p[0][0]);
+                                    k = Math.pow(l, 2);
+                                    m = (this.p[1][this.x - 1] - this.p[1][0]);
+                                    n = Math.pow(m, 2);
+                                } else {
+                                    l = (this.p[0][i] - this.p[0][i - 1]);
+                                    k = Math.pow(l, 2);
+                                    m = (this.p[1][i] - this.p[1][i - 1]);
+                                    n = Math.pow(m, 2);
+                                }
+                                g += Math.sqrt(k + n);
+                            }
+                            document.write("perimeter of triangle " + g + "<br>");
+                        }
+                    }
+
+                    class rectangle extends shape {
+                        constructor(x, edges) {
+                            super(x, edges);
+                        }
+                        area() {
+                            var len1 = 0;
+                            var len2 = 0;
+                            var g = 0;
+                            // alert(this.p[1]);
+                            for (var i = 0; i < this.x; i++) {
+                                if (!(this.p[0][i] != this.p[0][0] && this.p[1][i] != this.p[1][0])) {
+                                    // alert(this.p[0][0]);
+                                    if (len1 == 0) {
+                                        len1 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[0][0] - this.p[1][i]) ** 2);
+                                    } else {
+                                        len2 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[1][0] - this.p[1][i]) ** 2);
+                                    }
+                                    if (len1 != 0 && len2 != 0) {
+                                        g = len1*len2;
+                                    }
+
+                                }
+
+                            }
+
+
+                            document.write("area of rectangle " + g + "<br>");
+                        }
+                        perimeter() {
+                            var len1 = 0;
+                            var len2 = 0;
+                            var g = 0;
+                            // alert(this.p[1]);
+                            for (var i = 0; i < this.x; i++) {
+                                if (!(this.p[0][i] != this.p[0][0] && this.p[1][i] != this.p[1][0])) {
+                                    // alert(this.p[0][0]);
+                                    if (len1 == 0) {
+                                        len1 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[0][0] - this.p[1][i]) ** 2);
+                                    } else {
+                                        len2 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[1][0] - this.p[1][i]) ** 2);
+                                    }
+                                    if (len1 != 0 && len2 != 0) {
+                                        g = 2 * (len2 + len1);
+                                    }
+
+                                }
+
+                            }
+
+
+                            document.write("perimeter of rectangle " + g + "<br>");
+                        }
+                    }
+
+                    class square extends shape {
+                        constructor(x, edges) {
+                            super(x, edges);
+                        }
+                        area() {
+                            var len1 = 0;
+                            var len2 = 0;
+                            var g = 0;
+                            // alert(this.p[1]);
+                            for (var i = 0; i < this.x; i++) {
+                                if (!(this.p[0][i] != this.p[0][0] && this.p[1][i] != this.p[1][0])) {
+                                    // alert(this.p[0][0]);
+                                    if (len1 == 0) {
+                                        len1 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[0][0] - this.p[1][i]) ** 2);
+                                    } else {
+                                        len2 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[1][0] - this.p[1][i]) ** 2);
+                                    }
+                                    if (len1 != 0 && len2 != 0) {
+                                        g = 2 * (len2 + len1);
+                                    }
+
+                                }
+
+                            }
+
+
+                            document.write("area of square " + g + "<br>");
+                        }
+                        perimeter() {
+                            var len1 = 0;
+                            var len2 = 0;
+                            var g = 0;
+                            // alert(this.p[1]);
+                            for (var i = 0; i < this.x; i++) {
+                                if (!(this.p[0][i] != this.p[0][0] && this.p[1][i] != this.p[1][0])) {
+                                    // alert(this.p[0][0]);
+                                    if (len1 == 0) {
+                                        len1 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[0][0] - this.p[1][i]) ** 2);
+                                    } else {
+                                        len2 = Math.sqrt((this.p[0][0] - this.p[0][i]) ** 2 + (this.p[1][0] - this.p[1][i]) ** 2);
+                                    }
+                                    if (len1 != 0 && len2 != 0) {
+                                        g = 2 * (len2 + len1);
+                                    }
+
+                                }
+
+                            }
+
+
+                            document.write("perimeter of square " + g + "<br>");
+                        }
+                    }
+                    p1 = new point(0, 0);
+                    p2 = new point(0, 10);
+                    p3 = new point(10, 0);
+                    p4 = new point(10, 10);
+                    var edge = [p1, p2, p3];
+                    shape = new shape();
+                    traingle = new traingle(3, edge);
+                    traingle.area();
+                    traingle.perimeter();
+                    var edge1 = [p1, p2, p3, p4];
+                    square = new square(4, edge1);
+                    square.area();
+                    square.perimeter();
+                    var edge1 = [p1, p2, p3, p4];
+                    rectangle = new rectangle(4, edge1);
+                    rectangle.area();
+                    rectangle.perimeter();
+        </script>
+    </body>
+</html>

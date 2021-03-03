@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./assignment_7.css" rel="stylesheet">
+    <script src="./assignment_7.js"></script>
+</head>
+
+<body>
+    <form onSubmit="return fun();" action="./success.html"> 
+            <div class="Table">
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Firstname:</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" id='fname'></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Lastname:</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" id='lname'></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>date of joining</p>
+                        </div>
+                        <div class="Cell">
+                            <!-- <p><input type="date"  id="date"></p> -->
+                            <p><input type="text" id='date' onkeyup="fun1()" required><label id="warning" hidden>Enter date in DD-MM-YYYY format</label></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Email</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  ></p>
+                        </div>
+                    </div>
+
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>training programs to be attended</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="checkbox" id="training" value="photo" checked>
+                                <label for="training">Photography</label>
+                                <input type="checkbox" id="read" value="read">
+                                <label for="training"> reading</label><br>
+                                <input type="checkbox" id="training" value="watch">
+                                <label for="training">watching movies </label><br>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <div id="fav1" style="display:none;">favourite writer</div>
+                        </div>
+                        <div class="Cell">
+                            <input type="text" id='fav' placeholder="enter your writer" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p></p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="submit" value="submit" onsubmit="fun()">
+                                <input type="reset" value="Clear"></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <label id="minutes">00</label>:<label id="seconds">00</label>
+                        </div>
+                        <div class="Cell">
+                            <span class="output"></span> 
+                        </div>
+                    </div>
+                </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+input[type="button"] {
+    color: black;
+    width: 100%;
+    font-size: 40px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,163,11,0.14617169373549887) 2%, rgba(0,212,255,1) 100%);
+}
+button {
+    color: black;
+    width: 100%;
+    font-size: 40px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(29,163,11,0.14617169373549887) 2%, rgba(0,212,255,1) 100%);
+}
+input[type="text"] {
+    text-align: right;
+    background-color: white;
+    border-color: black;
+    width: 99%;
+    height: 50px;
+}
+table,th {
+    table-layout: fixed;
+    border-collapse: collapse;
+    align-content: center;
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>forms</title>
+        <script src="./assignment_1.js"></script>
+        <link href="./assignment_1.css" rel="stylesheet">
+    </head>
+    <body>
+        <form>  
+                <h3>Registration Page</h3>
+                <div>name<input type="text" id="fname" name="fname" maxlength="5" required></div>
+                <div>Phone number<input type="tel" id="tel" name="tel" pattern="[789][0-9]{9}" required></div>
+                <div>Email address<input type="email" id="email" name="email" size="35" required></div>
+                <div>Username<input type="text" id="uname" name="uname" maxlength="5" required></div>
+                <div>Password<input type="password" id="pass" maxlength="10" required></div>                
+                <div>Confirm Password<input type="password" id="cpass" maxlength="10" required></div>
+                <div><input type="submit" value="Submit" onclick="Validate()"></div>
+        </form>
+        <button onclick="location.href='assignment_1.html'">Go back</button>
+    </body>
+</html>

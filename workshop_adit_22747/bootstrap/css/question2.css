@@ -1,0 +1,15 @@
+.align{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.jumbotron{
+    margin-top: 100px;
+}
+
+.img-thumbnail{
+    width: 300px;
+    height: 200px;
+}

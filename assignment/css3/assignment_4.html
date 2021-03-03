@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./assignment_4.css" rel="stylesheet">
+</head>
+
+<body>
+    <form action="./success.html" >
+            <div class="Table">
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Employee id:</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="number" id="number" min="10001" max="15000" required autofocus></p>
+                        </div>
+            
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Firstname:</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" id='name' required pattern="[a-zA-Z]+" minlength="3" maxlength="15"></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Lastname:</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" id='name' pattern="[a-zA-Z]+" minlength="5" maxlength="25" required></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Department</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="radio" id="dept" name="dept" value="it">
+                                <label>IT</label><br>
+                                <input type="radio" id="dept" name="dept" value="hr">
+                                <label>HR</label><br>
+                                <input type="radio" id="dept" name="dept" value="finance">
+                                <label>finance</label></p>
+                                <input type="radio" id="dept" name="dept" value="admin">
+                                <label>admin</label></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>date of joining</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="date" required  max="2020-12-15"></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Email</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="email" name="email" id="email" required></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Contact no</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="tel" id="tel" name="tel" pattern="[789][0-9]{9}" required></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>Address</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="text" id='name' pattern="[a-zA-Z]+"  required></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p>training programs to be attended</p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="checkbox" id="training" value="Web">
+                                <label for="training"> Web basics</label><br>
+                                <input type="checkbox" id="training"value="C">
+                                <label for="training"> C#</label><br>
+                                <input type="checkbox" id="training"value="Entity">
+                                <label for="training"> Entity framework</label></p>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <p></p>
+                        </div>
+                        <div class="Cell">
+                            <p><input type="submit" value="submit" onsubmit="fun()">
+                                <input type="reset" value="Clear"></p>
+                        </div>
+                    </div>
+                </div>
+    </form>
+</body>
+<script>
+    function fun(){
+        
+        window.location.href = "./success.html";
+    }
+</script>
+
+</html>

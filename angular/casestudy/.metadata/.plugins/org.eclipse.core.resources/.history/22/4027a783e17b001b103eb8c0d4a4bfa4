@@ -1,0 +1,59 @@
+package com.cybage.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cybage.model.Users;
+import com.cybage.repository.UsersRepository;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+	
+	@Autowired
+	UsersRepository ur;
+	
+	
+	@GetMapping
+	public List<Users> getAllUsers(){
+		ur.save(new Users(1, "adit1", "adit1", "user"));
+		ur.save(new Users(2, "adit2", "adit2", "user"));
+		ur.save(new Users(3, "adit3", "adit3", "user"));
+		ur.save(new Users(4, "adit4", "adit4", "user"));
+		ur.save(new Users(5, "admin", "admin", "admin"));
+		return ur.findAll();
+	}
+	
+	@GetMapping("/{id}")
+	public Optional<Users> getUserById(int id){
+		return ur.findById(id);
+	}
+	
+	@PostMapping
+	public String addUser(@RequestBody Users user){
+		ur.save(user);
+		return "successfully added user";
+	}
+	
+	@PutMapping
+	public String updateUser(@RequestBody Users user){
+		ur.save(user);
+		return "successfully updated user";
+	}
+	
+	@DeleteMapping("/{id}")
+	public String deleteUser(@PathVariable int id){
+		ur.deleteById(id);
+		return "successfully deleted user";
+	}
+}

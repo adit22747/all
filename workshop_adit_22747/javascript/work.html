@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./work.css" />
+</head>
+
+<body>
+    <h1>Calculator</h1>
+
+    <table>
+        <tr>
+            <td colspan="2">
+                <button id="scientific">scientific</button>
+            </td>
+            <td colspan="2">
+                <a href="./work.html">
+                  <button>Standard </button>
+              </a>
+            </td>
+            <td  id="na">
+                <input type="button" value="NA" id="na2"  >
+            </td>
+           
+        </tr>
+        <tr>
+            <td id="na3">
+                <input type="button" value="NA" id="na1" >
+            </td>
+            <td>
+                <input type="button" value="c" onclick="clr()" />
+            </td>
+            <td>
+                <input type="button" id="d" class="button grey" value="&#8592;" onclick='back()'>
+            </td>
+            <td colspan="2" id="change">
+                <input type="text" id="edu" />
+            </td>
+        </tr>
+        <tr>
+            <td id="not">
+                <input type="button" value="NA" id="not1" >
+            </td>
+            <td>
+                <input type="button" value="+" onclick="dis('+')" />
+            </td>
+            <td>
+                <input type="button" value="1" onclick="dis('1')" />
+            </td>
+            <td>
+                <input type="button" value="2" onclick="dis('2')" />
+            </td>
+            <td>
+                <input type="button" value="3" onclick="dis('3')" />
+            </td>
+        </tr>
+
+        <tr>
+            <td id="square">
+                <input type="button" value="^2" onclick="squarefind('2')" id="square1" >
+            </td>
+            <td>
+                <input type="button" value="-" onclick="dis('-')" />
+            </td>
+            <td>
+                <input type="button" value="4" onclick="dis('4')" />
+            </td>
+            <td>
+                <input type="button" value="5" onclick="dis('5')" />
+            </td>
+            <td>
+                <input type="button" value="6" onclick="dis('6')" />
+            </td>
+        </tr>
+        <tr>
+            <td id="cube">
+                <input type="button" value="^3" onclick="cubefind('3')" id="cube1" >
+            </td>
+            <td>
+                <input type="button" value="*" onclick="dis('*')" />
+            </td>
+            <td>
+                <input type="button" value="7" onclick="dis('7')" />
+            </td>
+            <td>
+                <input type="button" value="8" onclick="dis('8')" />
+            </td>
+            <td>
+                <input type="button" value="9" onclick="dis('9')" />
+            </td>
+        </tr>
+        <tr>
+            <td  id="squareroot">
+                <input type="button" value="&Sqrt;" id="squareroot1" onclick="squareroot('^(1/2)')" />
+            </td>
+            <td>
+                <input type="button" value="/" onclick="dis('/')" />
+            </td>
+            <td>
+                <input type="button" value="." onclick="dis('.')" />
+            </td>
+            <td>
+                <input type="button" value="0" onclick="dis('0')" />
+            </td>
+            <td>
+                <input type="button" value="=" onclick="solve()" />
+            </td>
+        </tr>
+    </table>
+
+    <script src="./work.js"></script>
+</body>
+
+</html>
+
+
+
